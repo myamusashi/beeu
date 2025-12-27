@@ -1,21 +1,21 @@
-name: Deploy to Cloudflare Pages
+name: Deploy Worker
+
 on:
   push:
     branches:
       - master
+
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: node-22
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
-        with:
-          node-version: '22'
-      - run: npm run build
-      - name: Deploy to Cloudflare Pages
+      - run: npm install
+      - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./src --project-name=names
+          command: pages deploy src
