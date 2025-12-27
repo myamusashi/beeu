@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beuu kopi x Bunbun</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body class="bg-bgsecondary overflow-x-clip">
+    <!-- navigasi bar atas -->
+    <header class="top-0 left-0 right-0 fixed z-50 w-full">
+      <nav
+        class="py-2 flex items-center justify-center transition-all duration-300"
+      >
+        <ul
+          id="nav-bar"
+          class="py-3 px-3 gap-1 md:gap-25 flex w-fit items-center justify-center rounded-full transition-all duration-300"
+        >
+          <li>
+            <a
+              href="#"
+              class="scroll-to hover:bg-bgprimary md:scale-0 text-xs px-3 py-2 text-shadow-lg scale-95 rounded-full transition-all duration-200"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about-section"
+              class="scroll-to hover:bg-bgprimary md:scale-0 text-xs px-3 py-2 text-shadow-lg scale-95 rounded-full transition-all duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#menu-section"
+              class="scroll-to hover:bg-bgprimar md:scale-0y text-xs px-3 py-2 text-shadow-lg scale-95 rounded-full transition-all duration-200"
+              >Menu</a
+            >
+          </li>
+          <li>
+            <a
+              href="#community-section"
+              class="scroll-to hover:bg-bgprimary md:scale-0 text-xs px-3 py-2 text-shadow-lg scale-95 rounded-full transition-all duration-200"
+              >Community</a
+            >
+          </li>
+          <li>
+            <a
+              href="#locations-section"
+              class="scroll-to hover:bg-bgprimar md:scale-0y text-xs px-3 py-2 text-shadow-lg scale-95 rounded-full transition-all duration-200"
+              >Locations & Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main>
+          <!-- Hero -->
+          <section class="relative z-0">
+            <!-- background -->
+            <img
+              data-speed="0.5"
+              id="background-hero"
+              src="res/images/background-figma.jpg"
+              alt="Background"
+              class="top-0 left-0 shadow-2xl shadow-bgsecondary absolute -z-5 h-screen w-full object-cover object-center"
+            />
+
+            <!-- content -->
+            <div
+              class="py-35 gap-15 flex h-full w-full flex-col items-center justify-center"
+            >
+              <!-- logo -->
+              <div class="gap-6 md:gap-15 flex items-center justify-center">
+                <img
+                  id="logo-beuu"
+                  src="res/images/beuu-logo.png"
+                  alt="beuu kopi"
+                  class="w-20 md:w-36"
+                />
+                <span class="text-2xl md:text-6xl font-semibold">X</span>
+                <img
+                  id="logo-bunbun"
+                  src="res/images/bunbun-logo.png"
+                  alt="bunbun cemilan sehat"
+                  class="w-20 md:w-36"
+                />
+              </div>
+
+              <!-- title -->
+              <div class="gap-5 flex flex-col items-center">
+                <h1
+                  id="hero-title"
+                  class="text-2xl md:text-5xl lg:text-6xl font-bold text-shadow-lg leading-tight text-center"
+                >
+                  <span class="text-bgprimary">Hangat</span> Seperti di
+                  Rumah,<br />
+                  <span class="text-bgprimary">Nikmat</span> Seperti Kenangan.
+                </h1>
+                <p id="hero-subtitle" class="text-sm md:text-base text-center">
+                  Minuman & Makanan ala rumahan yang serasa masakan ibu
+                </p>
+                <button
+                  id="hero-button"
+                  class="md:scale-100 mt-15 w-fit scale-80"
+                >
+                  <a
+                    href="#menu-section"
+                    class="scroll-to gap-5 p-3 rounded-lg bg-bgprimary hover:bg-bgprimary/70 text-shadow-lg flex items-center transition-all duration-200"
+                  >
+                    <span> Lihat Menu Kami </span>
+                    <img
+                      src="res/icon/Arrow 1.svg"
+                      alt="panah ke kanan"
+                      class="w-8 h-8"
+                    />
+                  </a>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- about -->
+          <section
+            id="about-section"
+            class="py-64 pb-16 lg:py-50 bg-bgsecondary relative z-0 flex justify-center overflow-hidden text-[#42291A]"
+          >
+            <!-- background makanan -->
+            <img
+              src="res/images/about-kiri.svg"
+              alt="makanan"
+              class="size-96 -left-4 top-0 lg:size-180 lg:-left-30 lg:-top-50 absolute"
+            />
+            <img
+              src="res/images/about-kanan.svg"
+              alt="kopi"
+              class="size-96 -right-16 -bottom-32 lg:size-180 lg:-bottom-50 lg:-right-30 absolute z-20"
+            />
+
+            <!-- content -->
+            <div
+              id="about-content"
+              class="xl:w-3/5 flex w-10/12 flex-col items-start"
+            >
+              <h1
+                id="about-title"
+                class="text-3xl md:text-6xl font-bold self-center"
+              >
+                About Us
+              </h1>
+              <p
+                class="text-xs md:text-base font-semibold mt-10 md:mt-20 text-justify"
+              >
+                Beeu Kopi X Bunbun Cemilan Sehat merupakan kedai kopi & makanan
+                lokal yang menyajikan berbagai macam menu kopi & makanan khas
+                Nusantara.
+              </p>
+              <p class="text-xs md:text-base font-semibold mt-5 text-justify">
+                Lahir pada tahun 2018 dimana saat itu kami mengawali usaha dari
+                dapur rumah. Menawarkan menu makanan & minuman melalui sosial
+                media & marketplace.
+              </p>
+              <p class="text-xs md:text-base font-semibold mt-5 text-justify">
+                Hingga pada tahun 2019 kami memberanikan diri melangkah 1 tahap
+                ke babak baru dengan membuka kedai pertama di Sawangan, Depok.
+              </p>
+              <p class="text-xs md:text-base font-semibold mt-10 text-justify">
+                Kami menawarkan beragam macam minuman & makanan dengan mengusung
+                konsep kedai lokal ala rumahan dengan tagline "Serasa masakan
+                ibu". Semoga kehadiran kami bisa menjadi alternatif di era
+                gempuran brand kuliner asing yang masuk ke Pasar Indonesia. Kami
+                berharap pelanggan yang hadir dapat merasakan kilas balik
+                kembali ke suasana sederhana seperti di kampung halaman dulu.
+              </p>
+              <p class="text-xs md:text-base font-semibold mt-5 text-justify">
+                Semoga kami bisa terus tumbuh menjadi kedai yang setara dengan
+                kedai modern lainnya.
+              </p>
+              <p class="text-xs md:text-base font-semibold mt-5">
+                Salam hangat,<br />
+                Beeu Kopi & Bunbun Cemilan Sehat
+              </p>
+            </div>
+          </section>
+
+          <!-- Menu -->
+          <section
+            id="menu-section"
+            class=" font-medium gap-16 md:gap-28 lg:gap-48 py-44 relative z-10 flex h-fit w-full flex-col bg-[linear-gradient(to_bottom,transparent,var(--color-bgprimary)_10%,var(--color-bgprimary)_90%,var(--color-bgsecondary)_100%)] text-[#42291A]"
+          >
+            <div class="lg:flex lg:gap-12 xl:gap-32 w-full justify-start">
+              <img
+                class="inline-block w-36 h-36 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-120 xl:h-120 -translate-x-4 md:-translate-x-8 xl:-translate-x-12 aspect-square rounded-full rounded-bl-none border-4 border-[#9A5628] object-cover object-bottom"
+                src="res/images/menu-kiri.webp"
+                alt="Beuu Kopi Menu"
+              />
+              <h2
+                class="text-3xl md:text-5xl font-bold lg:hidden md:ml-8 inline-block"
+              >
+                Beeu Kopi
+              </h2>
+
+              <div class="relative">
+                <h2 class="lg:block lg:text-5xl xl:text-6xl font-bold hidden">
+                  Beeu Kopi
+                </h2>
+                <ul
+                  class="border-black divide-black mt-16 lg:mt-8 mx-auto flex w-fit divide-x-2 border-2"
+                >
+                  <li>
+                    <button
+                      class="beeu-menu-btn transition-all duration-400 w-24 xs:w-34 h-8 md:w-44 md:h-12 xl:w-52 xl:h-14 text-xs xs:text-base lg:text-xl xl:text-2xl bg-secondary font-bold text-white flex cursor-pointer items-center justify-center"
+                    >
+                      Black Coffee
+                    </button>
+                  </li>
+                  <li>
+                    <button 
+                      class="beeu-menu-btn transition-all duration-400 w-24 xs:w-34 h-8 md:w-44 md:h-12 xl:w-52 xl:h-14 text-xs xs:text-base lg:text-xl xl:text-2xl flex cursor-pointer items-center justify-center"
+                    >
+                      White Coffee
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="beeu-menu-btn transition-all duration-400 w-24 xs:w-34 h-8 md:w-44 md:h-12 xl:w-52 xl:h-14 text-xs xs:text-base lg:text-xl xl:text-2xl flex cursor-pointer items-center justify-center"
+                      >
+                      Non Coffee
+                    </button>
+                  </li>
+                </ul>
+                
+                <div class="flex w-full justify-center">
+                
+                  <ul
+                    class="absolute opacity-100 beeu-menu gap-x-4 xs:gap-x-12 gap-y-4 md:gap-y-2 xl:gap-y-8 text-xl mt-8 mx-auto grid w-fit grid-flow-col grid-rows-4"
+                  >
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Hot/Iced Black Coffee
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Expresso Single Shot
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Shakerato
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Tubruk Robusta/Arabika
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Hot/Iced Pour Over
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Cold Brew
+                    </li>
+                  </ul>
+
+                  <ul
+                    class="absolute opacity-0 beeu-menu gap-x-4 xs:gap-x-12 gap-y-4 md:gap-y-2 xl:gap-y-8 text-xl mt-8 mx-auto grid w-fit grid-flow-col grid-rows-4"
+                  >
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Cafe latte / Cappucino House Blend
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Cafe latte / Cappucino Arabika
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Affogatto Vanilla / Avocado / Kopyor
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Vietnamese Drip
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Espresso Delight
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Kopi Susu Gula Aren
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Es Kopi Vanilla Cinnamon
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Kopi Kopyor
+                    </li>
+                  </ul>
+
+                  <ul
+                    class="relative opacity-0 beeu-menu gap-x-4 xs:gap-x-12 gap-y-4 md:gap-y-2 xl:gap-y-8 text-xl mt-8 mx-auto grid w-fit grid-overflow-row grid-cols-2 max-h-72 overflow-y-scroll"
+                  >
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Botanikal with Lemon
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Milk Tea
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Lemon Tea
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Lipton Tea
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Lemonade
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Cascara Lemonade
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Apple Lemonade
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Orange Carrot
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Apple Carrot
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Orange Apple Carrot
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Hot / Iced Lemongrass Ginger
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Matcha Latte
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Hot / Iced Chocolate
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Milk Shake Vanilla / Chocolate
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Milk Shake Avocado / Kopyor
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Mineral Water
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="lg:flex lg:gap-12 xl:gap-32 w-full justify-end">
+              <div
+                class="lg:hidden gap-4 md:gap-16 flex items-center justify-between"
+              >
+                <h2 class="ml-4 text-3xl md:text-5xl font-bold w-64 md:w-92">
+                  Bunbun Cemilan Sehat
+                </h2>
+                <img
+                  class="w-36 h-36 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-120 xl:h-120 translate-x-4 md:translate-x-8 xl:translate-x-12 aspect-square rounded-full rounded-br-none border-4 border-[#9A5628] object-cover object-bottom"
+                  src="res/images/menu-kanan.webp"
+                  alt="Bunbun Menu"
+                />
+              </div>
+
+              <div>
+                <h2
+                  class="lg:text-5xl xl:text-6xl font-bold lg:inline-block hidden"
+                >
+                  Bunbun Cemilan Sehat
+                </h2>
+                <ul
+                  class="border-black divide-black mt-16 lg:mt-8 mx-auto flex w-fit divide-x-2 border-2"
+                >
+                  <li>
+                    <button
+                      class="bunbun-menu-btn transition-all duration-400 w-24 xs:w-34 h-8 md:w-44 md:h-12 xl:w-52 xl:h-14 text-xs xs:text-base lg:text-xl xl:text-2xl bg-secondary font-bold text-white flex cursor-pointer items-center justify-center"
+                    >
+                      Jajanan Pasar
+                    </button>
+                  </li>
+                  <li>
+                    <button 
+                      class="bunbun-menu-btn transition-all duration-400 w-24 xs:w-34 h-8 md:w-44 md:h-12 xl:w-52 xl:h-14 text-xs xs:text-base lg:text-xl xl:text-2xl flex cursor-pointer items-center justify-center"
+                    >
+                      Frozen Food
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="bunbun-menu-btn transition-all duration-400 w-24 xs:w-34 h-8 md:w-44 md:h-12 xl:w-52 xl:h-14 text-xs xs:text-base lg:text-xl xl:text-2xl flex cursor-pointer items-center justify-center"
+                      >
+                      Catering
+                    </button>
+                  </li>
+                </ul>
+                
+                <div class="flex w-full justify-center">
+                  <ul
+                    class="bunbun-menu relative opacity-100 gap-x-4 xs:gap-x-12 gap-y-4 md:gap-y-2 xl:gap-y-8 text-xl mt-8 mx-auto grid w-fit grid-flow-col grid-rows-4"
+                  >
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Klepon
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Onde-mande
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Kue Lapis
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Kue Pisang
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Tempe Mendoan
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Lumpia
+                    </li>
+                  </ul>
+
+                  <ul
+                    class="bunbun-menu absolute opacity-0 gap-x-4 xs:gap-x-12 gap-y-4 md:gap-y-2 xl:gap-y-8 text-xl mt-8 mx-auto grid w-fit grid-flow-col grid-rows-4"
+                  >
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Klepon
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Onde-mande
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Kue Lapis
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Kue Pisang
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Tempe Mendoan
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Lumpia
+                    </li>
+                  </ul>
+
+                  <ul
+                    class="bunbun-menu absolute opacity-0 gap-x-4 xs:gap-x-12 gap-y-4 md:gap-y-2 xl:gap-y-8 text-xl mt-8 mx-auto grid w-fit grid-flow-col grid-rows-4"
+                  >
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Klepon
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Onde-mande
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Kue Lapis
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Kue Pisang
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Tempe Mendoan
+                    </li>
+                    <li
+                      class="p-2 text-xs md:text-base xl:text-xl w-32 xs:w-40 md:w-56 xl:w-68 flex items-end border-b-2"
+                    >
+                      Lumpia
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <img
+                class="lg:block w-72 lg:w-96 xl:w-120 translate-x-4 md:translate-x-8 xl:translate-x-12 hidden aspect-square rounded-full rounded-br-none border-4 border-[#9A5628] object-cover object-bottom"
+                src="res/images/menu-kanan.webp"
+                alt="Bunbun Menu"
+              />
+            </div>
+          </section>
+
+          <!-- comunity -->
+          <section
+            id="community-section"
+            class="mb-50 py-16 flex h-screen flex-col"
+          >
+            <h1 class="text-5xl text-black font-bold mb-12 text-center">
+              Our Community
+            </h1>
+
+            <div class="flex-1">
+              <div class="scroll-container h-full overflow-x-hidden">
+                <div
+                  id="community-content"
+                  class="px-50 pb-4 gap-10 h-160 flex"
+                >
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-10.webp"
+                        alt="Community 1"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-11.webp"
+                        alt="Community 5"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-12.webp"
+                        alt="Community 2"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-13.webp"
+                        alt="Community 6"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-14.webp"
+                        alt="Community 3"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-15.webp"
+                        alt="Community 4"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-16.webp"
+                        alt="Community 1"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-17.webp"
+                        alt="Community 5"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-18.webp"
+                        alt="Community 2"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-19.webp"
+                        alt="Community 6"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-20.webp"
+                        alt="Community 3"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-21.webp"
+                        alt="Community 4"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-3.webp"
+                        alt="Community 3"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-4.webp"
+                        alt="Community 4"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-5.webp"
+                        alt="Community 3"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-6.webp"
+                        alt="Community 4"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+                  <div class="gap-4 w-64 flex shrink-0 flex-col justify-center">
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-7.webp"
+                        alt="Community 3"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                    <div
+                      class="rounded-lg shadow-lg hover:shadow-2xl bg-white relative overflow-hidden transition-all duration-300 hover:scale-95"
+                    >
+                      <img
+                        src="res/comunity-img/vibes-8.webp"
+                        alt="Community 4"
+                        class="h-auto w-full object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- testimonial -->
+          <section
+            class="pt-30 pb-70 from-bgtertiary to-bgsecondary bg-linear-0 from-90%"
+          >
+            <h1 class="text-5xl text-black font-bold mb-20 text-center">
+              Testimonial
+            </h1>
+            <!-- content -->
+            <div class="gap-10 flex flex-wrap justify-center">
+              <!-- testimoni card -->
+              <div
+                class="gap-3 max-w-100 bg-bgprimary/80 rounded-2xl p-5 shadow-2xl relative flex items-center justify-center"
+              >
+                <span
+                  class="text-8xl text-secondary -top-4 left-0 font-bold absolute"
+                  >"</span
+                >
+                <span
+                  class="text-8xl text-secondary -bottom-4 right-0 font-bold absolute rotate-180"
+                  >"</span
+                >
+                <div class="gap-5 max-w-80 flex flex-col">
+                  <p class="text-xs text-shadow-2xs line-clamp-6">
+                    Dimsum nya enak bangeeeetttttt, dimsum mentai nya juwara,
+                    tempat nya cozy, bersih daaannn minuman favorit saya disitu
+                    Latte Rum Raisin. Sumpah ENDOLITA
+                  </p>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="gap-3 flex flex-col items-center">
+                  <img
+                    src="res/images/blank-image.png"
+                    alt="Testimoni"
+                    class="min-w-15 min-h-15 w-15 h-15 shadow-2xl rounded-full object-cover object-center"
+                  />
+                  <span
+                    class="font-semibold text-xs text-shadow-2xs line-clamp-2 text-center"
+                    >anetta dwikanya</span
+                  >
+                </div>
+              </div>
+              <div
+                class="gap-3 max-w-100 bg-bgprimary/80 rounded-2xl p-5 shadow-2xl relative flex items-center justify-center"
+              >
+                <span
+                  class="text-8xl text-secondary -top-4 left-0 font-bold absolute"
+                  >"</span
+                >
+                <span
+                  class="text-8xl text-secondary -bottom-4 right-0 font-bold absolute rotate-180"
+                  >"</span
+                >
+                <div class="gap-5 max-w-80 flex flex-col">
+                  <p class="text-xs text-shadow-2xs line-clamp-6">
+                    Tempatnya enak bgtt, bersih dan adem. Untuk dimsum aku
+                    paling suka yg mentai rasanya enak bgtt pokonya beda dari yg
+                    lain, dagingnya berasa bgt, the best deh, belom pernah makan
+                    dimsum seenak ini, untuk kopi aku paling suka yg matcha late
+                    ❤️
+                  </p>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="gap-3 flex flex-col items-center">
+                  <img
+                    src="res/images/blank-image.png"
+                    alt="Testimoni"
+                    class="min-w-15 min-h-15 w-15 h-15 shadow-2xl rounded-full object-cover object-center"
+                  />
+                  <span
+                    class="font-semibold text-xs text-shadow-2xs line-clamp-2 text-center"
+                    >Nafila Damayanti</span
+                  >
+                </div>
+              </div>
+              <div
+                class="gap-3 max-w-100 bg-bgprimary/80 rounded-2xl p-5 shadow-2xl relative flex items-center justify-center"
+              >
+                <span
+                  class="text-8xl text-secondary -top-4 left-0 font-bold absolute"
+                  >"</span
+                >
+                <span
+                  class="text-8xl text-secondary -bottom-4 right-0 font-bold absolute rotate-180"
+                  >"</span
+                >
+                <div class="gap-5 max-w-80 flex flex-col">
+                  <p class="text-xs text-shadow-2xs line-clamp-6">
+                    Tempat yang sangat humble seperti dirumah sendiri, kopinya
+                    enakk pelayanan nya top, owner nya baik, harganya
+                    terjangkau, bakal jadi loyal customer disini. Cuma tempatnya
+                    agak kedalem jdi ga keliatan.
+                  </p>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="gap-3 flex flex-col items-center">
+                  <img
+                    src="res/images/blank-image.png"
+                    alt="Testimoni"
+                    class="min-w-15 min-h-15 w-15 h-15 shadow-2xl rounded-full object-cover object-center"
+                  />
+                  <span
+                    class="font-semibold text-xs text-shadow-2xs line-clamp-2 text-center"
+                    >achmad ramadhan</span
+                  >
+                </div>
+              </div>
+              <div
+                class="gap-3 max-w-100 bg-bgprimary/80 rounded-2xl p-5 shadow-2xl relative flex items-center justify-center"
+              >
+                <span
+                  class="text-8xl text-secondary -top-4 left-0 font-bold absolute"
+                  >"</span
+                >
+                <span
+                  class="text-8xl text-secondary -bottom-4 right-0 font-bold absolute rotate-180"
+                  >"</span
+                >
+                <div class="gap-5 max-w-80 flex flex-col">
+                  <p class="text-xs text-shadow-2xs line-clamp-6">
+                    Kemana aja dirikuu, baru nyoba kopi arabicanya enak,, next
+                    insyaa Allah mau coba makanannya sm minuman yg lain.
+                  </p>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="gap-3 flex flex-col items-center">
+                  <img
+                    src="res/images/blank-image.png"
+                    alt="Testimoni"
+                    class="min-w-15 min-h-15 w-15 h-15 shadow-2xl rounded-full object-cover object-center"
+                  />
+                  <span
+                    class="font-semibold text-xs text-shadow-2xs line-clamp-2 text-center"
+                    >LULU SA'IDAH * HAYNAF STORY</span
+                  >
+                </div>
+              </div>
+              <div
+                class="gap-3 max-w-100 bg-bgprimary/80 rounded-2xl p-5 shadow-2xl relative flex items-center justify-center"
+              >
+                <span
+                  class="text-8xl text-secondary -top-4 left-0 font-bold absolute"
+                  >"</span
+                >
+                <span
+                  class="text-8xl text-secondary -bottom-4 right-0 font-bold absolute rotate-180"
+                  >"</span
+                >
+                <div class="gap-5 max-w-80 flex flex-col">
+                  <p class="text-xs text-shadow-2xs line-clamp-6">
+                    Nybain cofee es cream, afogato. Enak .. Tempat enak nyaman
+                    bersih..
+                  </p>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="gap-3 flex flex-col items-center">
+                  <img
+                    src="res/images/blank-image.png"
+                    alt="Testimoni"
+                    class="min-w-15 min-h-15 w-15 h-15 shadow-2xl rounded-full object-cover object-center"
+                  />
+                  <span
+                    class="font-semibold text-xs text-shadow-2xs line-clamp-2 text-center"
+                    >WAHYU PROPERTY CHANEL</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- location -->
+        <footer
+          id="locations-section"
+          class="from-bgsecondary to-bgtertiary bg-radial-[at_50%_75%] from-80% to-90%"
+        >
+          <!-- icon -->
+          <div
+            class="to-bgtertiary h-32 md:h-56 lg:h-70 px-10 relative flex w-full justify-between bg-linear-0 from-transparent to-80%"
+          >
+            <a
+              href="https://www.facebook.com/bunbuncemilansehat/"
+              target="_blank"
+            >
+              <img
+                src="res/icon/facebook.svg"
+                alt="facebook"
+                class="w-8 md:w-13 lg:w-16 top-12 md:top-30 relative aspect-square"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/bunbuncemilansehat/"
+              target="_blank"
+            >
+              <img
+                src="res/icon/instagram.svg"
+                alt="instagram"
+                class="w-8 md:w-13 lg:w-16 md:top-10 relative aspect-square"
+              />
+            </a>
+
+            <a href="https://wa.me/6281285295547" target="_blank">
+              <img
+                src="res/icon/whatsapp.svg"
+                alt="whatsapp"
+                class="w-8 md:w-13 lg:w-16 top-12 md:top-0 relative aspect-square"
+              />
+            </a>
+
+            <a
+              href="https://www.threads.com/@bunbuncemilansehat"
+              target="_blank"
+            >
+              <img
+                src="res/icon/thread.svg"
+                alt="thread"
+                class="w-8 md:w-13 lg:w-16 md:top-10 relative aspect-square"
+              />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@bunbuncemilansehat"
+              target="_blank"
+            >
+              <img
+                src="res/icon/youtube.svg"
+                alt="youtube"
+                class="w-8 md:w-13 lg:w-16 top-12 md:top-30 relative aspect-square"
+              />
+            </a>
+          </div>
+
+          <!-- content -->
+          <div class="px-8 md:px-30 pb-20">
+            <div
+              class="gap-5 lg:flex-row flex flex-col items-center justify-center"
+            >
+              <!-- location -->
+              <div
+                id="map"
+                class="md:aspect-auto md:h-120 rounded-xl shadow-2xl lg:w-1/2 aspect-square w-full"
+              ></div>
+
+              <!-- detail -->
+              <div class="text-black lg:max-w-1/2 w-full">
+                <div class="gap-2 flex items-start">
+                  <img
+                    src="res/icon/location_on.svg"
+                    alt="location on"
+                    class="w-4 translate-y-1 md:translate-y-0 md:w-8 aspect-square"
+                  />
+                  <div>
+                    <h3 class="text-base md:text-2xl">LOKASI</h3>
+                    <p class="text-xs md:text-sm mt-3">
+                      Vila Rizki Ilhami 2 Blok RA no. 18A, Pengasinan, Sawangan,
+                      Depok City, West Java 16518
+                    </p>
+                  </div>
+                </div>
+
+                <div class="gap-2 mt-10 flex items-start">
+                  <img
+                    src="res/icon/Clock.svg"
+                    alt="clock"
+                    class="w-4 translate-y-1 md:translate-y-0 md:w-8 aspect-square"
+                  />
+                  <div>
+                    <h3 class="text-base md:text-2xl">WAKTU OPERASIONAL</h3>
+                    <p class="text-xs md:text-sm mt-3">
+                      Senin - Jum’at : 08.30 - 22.00 WIB <br />
+                      Sabtu & Minggu : 07.00 - 22.00 WIB
+                    </p>
+                  </div>
+                </div>
+
+                <div class="gap-2 mt-10 flex items-start">
+                  <img
+                    src="res/icon/Phone call.svg"
+                    alt="phone call"
+                    class="w-4 translate-y-1 md:translate-y-0 md:w-8 aspect-square"
+                  />
+                  <div>
+                    <h3 class="text-base md:text-2xl">KONTAK</h3>
+                    <p class="text-xs md:text-sm mt-3">0812-8529-5547</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- button -->
+            <div
+              class="mt-15 md:flex-row gap-4 lg:justify-around flex flex-col flex-wrap justify-start"
+            >
+              <a
+                href="https://maps.app.goo.gl/mnM3UTKTnBkXkTDg6"
+                target="_blank"
+                class="px-4 py-2 gap-2 rounded-lg flex w-fit cursor-pointer items-center bg-[#4EB7FB]"
+              >
+                <img src="res/icon/Map.svg" alt="map" />
+                <span>Buka di Maps</span>
+                <img src="res/icon/Arrow 1.svg" alt="arrow" class="w-6 h-6" />
+              </a>
+              <a
+                href="https://gofood.co.id/jakarta/restaurant/bunbun-cemilan-sehat-sawangan-7ed89c3a-373e-4450-8468-7636a441331c"
+                target="_blank"
+                class="px-4 py-2 gap-2 rounded-lg flex w-fit cursor-pointer items-center bg-[#00AA13]"
+              >
+                <img src="res/icon/gofood-logo 1.svg" alt="go food" />
+                <span>Pesan Lewat GoFood</span>
+                <img src="res/icon/Arrow 1.svg" alt="arrow" class="w-6 h-6" />
+              </a>
+              <a
+                href="https://wa.me/6281285295547"
+                target="_blank"
+                class="px-4 py-2 gap-2 rounded-lg flex w-fit cursor-pointer items-center bg-[#4CAF50]"
+              >
+                <img src="res/icon/whatsapp 1.svg" alt="whatsapp" />
+                <span>Kontak Whatsapp Kami</span>
+                <img src="res/icon/Arrow 1.svg" alt="arrow" class="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
